@@ -1,6 +1,17 @@
 require_relative "boot"
 
-require "rails/all"
+# Load only the necessary Rails components for an API-only app
+require "rails"
+require "active_model/railtie"
+require "active_job/railtie"
+require "active_record/railtie"
+require "action_controller/railtie"
+require "action_mailer/railtie"
+require "action_cable/engine"        # Add back ActionCable for RSpec compatibility
+# require "action_mailbox/engine"   # Remove Action Mailbox
+# require "action_text/engine"      # Remove Action Text
+# require "active_storage/engine"   # Remove Active Storage if not needed
+require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -28,5 +39,13 @@ module LbyteSecurity
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Load custom middleware (temporarily disabled)
+    # config.autoload_paths << Rails.root.join("app", "middleware")
+
+    # Add tenant middleware for automatic tenant resolution (temporarily disabled for testing)
+    # config.middleware.use "TenantMiddleware"
+
+    # Additional API-only optimizations can be added here
   end
 end
