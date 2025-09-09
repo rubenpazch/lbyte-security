@@ -38,7 +38,7 @@ gem "devise"
 gem "devise-jwt"
 
 # Custom multitenancy gem - using pg_multitenant_schemas
-gem 'pg_multitenant_schemas', '~> 0.2.0'
+gem 'pg_multitenant_schemas', '~> 0.2.2'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

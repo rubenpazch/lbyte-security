@@ -208,7 +208,7 @@ GEM
     pg (1.6.2-aarch64-linux-musl)
     pg (1.6.2-x86_64-linux)
     pg (1.6.2-x86_64-linux-musl)
-    pg_multitenant_schemas (0.2.0)
+    pg_multitenant_schemas (0.2.2)
       activerecord (>= 8.0, < 9.0)
       activesupport (>= 8.0, < 9.0)
       pg (~> 1.5)
@@ -391,7 +391,7 @@ DEPENDENCIES
   jbuilder
   kamal
   pg (~> 1.1)
-  pg_multitenant_schemas (~> 0.2.0)
+  pg_multitenant_schemas (~> 0.2.2)
   puma (>= 5.0)
   rack-cors
   rails (~> 8.0.2)
